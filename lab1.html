@@ -1,14 +1,15 @@
-+<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
+
 </head>
 <body>
 <form>
-	Email<input type="text" name = "email">
-	Un<input type="text" name="username">
-	Pw<input type="password" name="password">
-	<input type="submit" name="submit" value="submit">
+	Email<input type="text" name="email" id="txtEmail">
+	Username:<input type="text" name="username" id="txtUser">
+	Password:<input type="password" name="password" id="txtPassword">
+	<input type="submit" name="submit" value="submit" onclick="validateEmptyValues()">
 </form>
 <script type="text/javascript" src="script.js"></script>
 </body>
