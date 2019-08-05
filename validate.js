@@ -15,7 +15,7 @@ function validate()
 	}
 
 	else{
-		//If email is not empty; Check if it is valid email or not
+		
 		var validEmail = validateEmail();
 		if(!validEmail)
 		{
