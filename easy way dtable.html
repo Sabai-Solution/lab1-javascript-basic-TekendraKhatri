@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Table using easy way</title>
+</head>
+<body>
+    <div id="myDiv"></div>
+<script type="text/javascript">
+
+    var studentList = [
+                        {"sno":1,"name":"Tekendra"},
+                        {"sno":2,"name":"Bishnu"},
+                        {"sno":3,"name":"Saurav"},
+                       ];
+
+
+
+    
+var my_table = document.createElement('table');
+
+my_table.border = '1'; 
+
+    var tr_head = document.createElement('tr');
+    
+    var td_sno = document.createElement('td');
+    td_sno.appendChild(document.createTextNode("S.No"));
+    var td_name = document.createElement('td');
+    td_name.appendChild(document.createTextNode("Name"));
+
+    tr_head.appendChild(td_sno);
+    tr_head.appendChild(td_name);
+
+    
+    my_table.appendChild(tr_head);
+    
+
+for (i = 0; i < studentList.length; i++) 
+{
+    var tr = document.createElement('tr');
+    
+    for (var key in studentList[i]) {
+        var td = document.createElement('td');
+        td.appendChild(document.createTextNode(studentList[i][key]));
+        tr.appendChild(td)
+    }
+    my_table.appendChild(tr);
+}
+
+document.getElementById("myDiv").appendChild(my_table);
+
+
+</script>
+</body>
+</html>
