@@ -1,0 +1,58 @@
+<!DOCTYPE html>.
+<html>
+<head>
+</head>
+<body>
+<h1>Javascript Basics</h1>
+<script type="text/javascript">
+onerror = exfoerr;
+function exfoerr(msg,url,line) 
+{
+	alert(msg+";"+url+";"+line+";");
+} 
+function display() 
+{ 
+	addxlert("Click to Proceed!!!!");
+} 
+
+	function show_alert(){
+		alert("I am an alert box!!");
+	}
+	function show_confirm()
+{
+var r=confirm("Press a button. Message appears here");
+if (r==true)
+{
+document.write("You pressed OK!"); }
+else {
+document.write("You pressed Cancel!");
+}
+ } 
+    function show_prompt()
+    {
+    	try{
+		     var name=prompt("Enter your name","ASMT");
+		     alert("My College.");
+	       }
+	    catch(err)
+	       {
+		     alert(err);
+		     //console.log(err);
+	       }
+	}
+	
+</script>
+
+<h2>Alert Demo</h2>
+<input type="button" onclick="show_alert()"  name="Alert" value="Show alert box" /> 
+
+<h2>Confirmation Demo</h2>
+<input type="button" onclick="show_confirm()" name="Confirm" value="Show confirm box" />
+
+<h2>Prompt Demo</h2>
+<input type="button" onclick="show_prompt()"  name="Prompt" value="Show prompt box" /> 
+
+<h2>Error Handling Demo</h2>
+<input type="button" value="View message" name="ErrorHandling" onclick="display()" />
+</body>
+</html>
