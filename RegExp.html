@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RegExp</title>
+</head>
+<body>
+<h1>Demo for RegExp</h1>
+<script type='text/javascript'>
+function Validate_Email()
+{
+  var patt=/^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+  var v= document.getElementById('elem').value;
+if(v.match(patt)) 
+ {
+   document.write(" Email is valid");
+ }
+ else 
+ {
+   document.getElementById('elem').focus(); 
+   document.write(" Email is not valid");
+ }
+}
+function Validate_IPaddress()
+ {  
+	var p=/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+  var q= document.getElementById('name').value;
+if(q.match(p)) 
+ {
+   document.write(" IPV4 is valid");
+ }
+ else 
+ {
+   document.getElementById('name').focus(); 
+   document.write(" IPV4 is not valid");
+ }
+
+}
+   
+
+function Validate_DomainName()
+ {
+    var a=/^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$/;
+  var t= document.getElementById('id').value;
+if(t.match(a)) 
+ {
+   document.write(" Domain name is valid");
+ }
+ else 
+ {
+   document.getElementById('id').focus(); 
+   document.write(" Domain name is not valid");
+ }
+ }
+
+</script>
+
+<h2>Demo for Email Validation</h2>
+<form>
+Email ID: <input type='text' id='elem'/>
+<input type='button' onclick="Validate_Email()" value='Submit'/>
+</form>
+
+<h2>Demo for IPV4 Address Validation</h2>
+<form>
+IPV4 Address: <input type='text' id='name'/>
+<input type='button' onclick="Validate_IPaddress()" value='Click'/>
+</form>
+
+<h2>Demo for Domain Name Validation</h2>
+<form>
+Domain Name: <input type='text' id='id'/>
+<input type='button' onclick="Validate_DomainName()" value='Press'/>
+</form>
+
+</body>
+</html>
